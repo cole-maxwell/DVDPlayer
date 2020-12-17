@@ -3,14 +3,19 @@ package edu.umb.cs680.hw06;
 
 public class DrawerClosedNotPlaying implements State
 {
-	private DrawerClosedNotPlaying()	{
-		System.out.println("the DVD player is now closed and not playing");
-	}
+	private DrawerClosedNotPlaying() {}
+
+	private static DrawerClosedNotPlaying instance = null;
 
 	public static DrawerClosedNotPlaying getInstance() {
-		return new DrawerClosedNotPlaying();
+		if (instance == null) {
+    		instance = new DrawerClosedNotPlaying();
+    		System.out.println("the DVD player is now closed and not playing");
+    	} else {
+    		System.out.println("sorry, you can only be one state at a time.");
+    	}
+		return instance;
 	}
-
 
 	public void openCloseButtonPushed(DVDPlayer player) {
 		player.open();

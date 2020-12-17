@@ -4,12 +4,18 @@ package edu.umb.cs680.hw06;
 public class DrawerOpen implements State
 {
 
-	public DrawerOpen() {
-		System.out.println("the DVD player is now open");
-	}
+	public DrawerOpen() {}
+
+	private static DrawerOpen instance = null;
 
 	public static DrawerOpen getInstance() {
-		return new DrawerOpen();
+		if (instance == null) {
+    		instance = new DrawerOpen();
+    		System.out.println("the DVD player is now open");
+    	} else {
+    		System.out.println("sorry, you can only be one state at a time.");
+    	}
+		return instance;
 	}
 	
 	public void openCloseButtonPushed(DVDPlayer player) {

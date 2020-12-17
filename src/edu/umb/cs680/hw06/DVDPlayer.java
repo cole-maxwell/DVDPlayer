@@ -4,11 +4,18 @@ public class DVDPlayer
 {	
 	private State state;
 	private DVDPlayer()	{
-		System.out.println("here's your DVD Player, currently its closed and not playing..");
 		this.state = DrawerClosedNotPlaying.getInstance();
 	}
+	private static DVDPlayer instance = null;
+
 	public static DVDPlayer getInstance() {
-		return new DVDPlayer();
+		if (instance == null) {
+    		instance = new DVDPlayer();
+    		System.out.println("here's your DVD Player, currently its closed and not playing..");
+    	} else {
+    		System.out.println("sorry, you can't check out a second instance.");
+    	}
+		return instance;
 	}
 
 	public void changeState(State state) {	
