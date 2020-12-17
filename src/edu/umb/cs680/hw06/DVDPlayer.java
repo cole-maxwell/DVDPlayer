@@ -3,25 +3,21 @@ package edu.umb.cs680.hw06;
 public class DVDPlayer
 {	
 	private State state;
-
-	public DVDPlayer()	{
+	private DVDPlayer()	{
 		System.out.println("here's your DVD Player, currently its closed and not playing..");
-		this.state = new DrawerClosedNotPlaying();
+		this.state = DrawerClosedNotPlaying.getInstance();
 	}
-
-	// public static DVDPlayer getInstance() {
-	// 	return new DVDPlayer();
-	// }
+	public static DVDPlayer getInstance() {
+		return new DVDPlayer();
+	}
 
 	public void changeState(State state) {	
 		this.state = state;
 	}
-	
 	public void openCloseButtonPushed() {
 		System.out.println("the open/close button was pushed");
 		state.openCloseButtonPushed(this);
 	}
-	
 	public void playButtonPushed() {
 		System.out.println("the play button was pushed");
 		state.playButtonPushed(this);
@@ -31,16 +27,16 @@ public class DVDPlayer
 		state.stopButtonPushed(this);
 	}
 
-	public void open() {
+	protected void open() {
 		System.out.println("the DVD drawer is opening...now it's open");
 	}
-	public void close() {
+	protected void close() {
 		System.out.println("the DVD drawer is closing...now it's closed");
 	}
-	public void play() {
+	protected void play() {
 		System.out.println("the DVD started playing");
 	}
-	public void stop() {
+	protected void stop() {
 		System.out.println("the DVD stopped");
 	}
 }

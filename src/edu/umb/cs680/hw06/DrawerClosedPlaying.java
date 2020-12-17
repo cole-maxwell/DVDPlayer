@@ -3,14 +3,18 @@ package edu.umb.cs680.hw06;
 
 public class DrawerClosedPlaying implements State
 {
-	public DrawerClosedPlaying() {
+	private DrawerClosedPlaying() {
 		System.out.println("the DVD player is now closed and playing");
+	}
+
+	public static DrawerClosedPlaying getInstance() {
+		return new DrawerClosedPlaying();
 	}
 	
 	public void openCloseButtonPushed(DVDPlayer player) {
 		player.stop();
 		player.open();
-		player.changeState(new DrawerOpen());
+		player.changeState(DrawerOpen.getInstance());
 	}
 
 	public void playButtonPushed(DVDPlayer player) {
@@ -19,7 +23,7 @@ public class DrawerClosedPlaying implements State
 
 	public void stopButtonPushed(DVDPlayer player) {
 		player.stop();
-		player.changeState(new DrawerClosedNotPlaying());
+		player.changeState(DrawerClosedNotPlaying.getInstance());
 	}
 }
 
