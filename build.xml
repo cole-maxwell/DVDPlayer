@@ -33,31 +33,31 @@
             <classpath refid="classpath"/>	
 			<include name="edu/umb/cs680/hw06/*.java"/>
 		</javac>
-		<!-- <javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="false">
+		<javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="false">
             <classpath refid="classpath"/>	
-			<include name="edu/umb/cs680/hw03/PrimeGeneratorTest.java"/>
-		</javac> -->
+			<include name="edu/umb/cs680/hw06/*.java"/>
+		</javac>
 	</target>
 
 	<target name="run" depends="compile">
 		<java classname="edu.umb.cs680.hw06.StartupDVD"
 				classpathref="classpath"  
 				fork="true"/>
-		<!-- <junitlauncher printSummary="true">
+		<junitlauncher printSummary="true">
 			<classpath refid="classpath" />
 			<testclasses outputdir="${test.reports}">
 				<fileset dir="${test.bin}">	
-					<include name="edu/umb/cs680/hw03/*Test.class"/>
+					<include name="edu/umb/cs680/hw06/*Test.class"/>
 				</fileset>
 				<listener type="legacy-plain" sendSysOut="true"/>
 			</testclasses>
-		</junitlauncher> -->
+		</junitlauncher>
 	</target>
 
-	<!-- <target name="clean" depends="run">
+	<target name="clean" depends="run">
 		<delete includeemptydirs="true">
-			<fileset dir="${bin}/edu/umb/cs680/hw03" includes="**/*"/>
-			<fileset dir="${test.bin}/edu/umb/cs680/hw03" includes="**/*" />
+			<fileset dir="${bin}/edu/umb/cs680/hw06" includes="**/*"/>
+			<fileset dir="${test.bin}/edu/umb/cs680/hw06" includes="**/*" />
 		</delete>
 	</target>
 
@@ -67,6 +67,6 @@
 			<fileset dir="${test.bin}"/>
 			<fileset dir="${test.reports}"/>
 		</delete>
-	</target> -->
+	</target>
 
 </project>
