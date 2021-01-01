@@ -5,7 +5,7 @@ A DVDPlayer object uses the State Design Pattern to behave appropriately dependi
 
 ---- Compile & Run ----<br />
 
-**_cd_** to **_/DVDPlayer_** and type **_ant -f build.xml_**.<br />
+Clone the repo, **_cd_** to **_/DVDPlayer_** and type **_ant -f build.xml_**.<br />
 
 ---- Prerequisite Steps & Environment Setup ----<br />
 
