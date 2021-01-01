@@ -8,7 +8,7 @@ public class DVDPlayerTest {
 	@Test
 	public void verifySomething()
 	{
-
+		// a test can be implemented here.
 	}
 
 }
