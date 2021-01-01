@@ -34,16 +34,16 @@ public class DVDPlayer
 		state.stopButtonPushed(this);
 	}
 
-	protected void open() {
+	public void open() {
 		System.out.println("the DVD drawer is opening...now it's open");
 	}
-	protected void close() {
+	public void close() {
 		System.out.println("the DVD drawer is closing...now it's closed");
 	}
-	protected void play() {
+	public void play() {
 		System.out.println("the DVD started playing");
 	}
-	protected void stop() {
+	public void stop() {
 		System.out.println("the DVD stopped");
 	}
 }

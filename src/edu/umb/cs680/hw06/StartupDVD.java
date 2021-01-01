@@ -7,6 +7,5 @@ public class StartupDVD {
 		player.stopButtonPushed();
 		player.openCloseButtonPushed();
 		player.playButtonPushed();
-
 	}
 }
