@@ -1,12 +1,11 @@
-# Car
+# DVDPlayer
 ---- Program Description ----<br />
 
-Car.java creates a Car object with Make, Model, Price, Year, and Mileage.<br />
-CarTest.java verifies Cars's methods using JUnit.<br />
+A DVDPlayer object uses the State Design Pattern to behave appropriately depending on its state.<br />
 
 ---- Compile & Run ----<br />
 
-**_cd_** to **_/PrimeGenerator_** and type **_ant -f build.xml_**.<br />
+**_cd_** to **_/DVDPlayer_** and type **_ant -f build.xml_**.<br />
 
 ---- Prerequisite Steps & Environment Setup ----<br />
 
