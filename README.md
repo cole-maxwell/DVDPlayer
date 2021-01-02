@@ -1,7 +1,9 @@
 # DVDPlayer
 ---- Program Description ----<br />
 
-A DVDPlayer object uses the State Design Pattern to behave appropriately depending on its state.<br />
+A DVDPlayer object uses state design to behave appropriately depending on which of the three.<br />
+states the DVDPlayer is in - DrawerOpen, DrawerClosedNotPlaying, & DrawClosedPlaying - each<br />
+class extends the State interface.<br />
 
 ---- Compile & Run ----<br />
 
